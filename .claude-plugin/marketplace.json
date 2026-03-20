@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "lyn-lawfirm",
-  "description": "한국 법률 검색 및 법률 문서 작성 도구 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 합의서, 사실확인서 작성 | Korean law search & legal document drafting tools for Claude Code",
+  "description": "한국 법률 검색 및 법률 문서 작성 도구 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 합의서, 사실확인서 작성. AI는 실수할 수 있으며, 본 플러그인 사용으로 인한 피해에 대해서는 책임지지 않습니다. | Korean law search & legal document drafting tools. AI can make mistakes and we are not liable for any damages.",
   "owner": {
     "name": "hoshin"
   },
@@ -9,7 +9,7 @@
     {
       "name": "lyn-lawfirm",
       "source": "./",
-      "description": "한국 법률 검색 및 법률 문서 작성 플러그인 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 합의서, 사실확인서 초안 작성 | Korean law search & legal document drafting plugin",
+      "description": "한국 법률 검색 및 법률 문서 작성 플러그인 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 합의서, 사실확인서 초안 작성. AI는 실수할 수 있으며, 사용으로 인한 피해에 대해 책임지지 않습니다. | Korean law search & legal document drafting plugin. AI can make mistakes and we are not liable for any damages.",
       "version": "1.0.0",
       "category": "legal",
       "tags": ["korean-law", "legal", "law-search", "mcp", "legal-document", "고소장", "내용증명", "합의서"],
