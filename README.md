@@ -72,6 +72,16 @@ https://korean-law.up.railway.app/mcp
 
 The server wraps the Korean Law Information Center Open API and provides structured access to Korean legal data.
 
+## 유의사항 | Disclaimer
+
+본 플러그인의 법률 문서 작성 스킬은 AI가 생성한 초안을 제공합니다. AI는 실수할 수 있으며, 본 스킬 사용으로 인한 피해에 대해서는 책임지지 않습니다. 최종 전문가 검수를 원하시면 이영남 변호사와 상의하세요.
+
+This plugin provides AI-generated legal document drafts. AI can make mistakes, and we are not responsible for any damages arising from the use of this plugin. For professional review, please consult Attorney Young-Nam Lee.
+
+- 📞 010-8652-4348
+- 📧 ibiubu70@gmail.com
+- 🌐 [www.thechain.lawyer](https://www.thechain.lawyer)
+
 ## 라이선스 | License
 
 MIT
