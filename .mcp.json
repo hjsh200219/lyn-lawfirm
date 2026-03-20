@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "korean-law": {
+      "type": "url",
+      "url": "https://korean-law.up.railway.app/mcp"
+    }
+  }
+}

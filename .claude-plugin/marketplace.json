@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "lyn-lawfirm",
+  "description": "Korean law search tools for Claude Code - access Korean laws, court cases, legal terms, and more",
+  "owner": {
+    "name": "hoshin"
+  },
+  "plugins": [
+    {
+      "name": "lyn-lawfirm",
+      "source": "./",
+      "description": "Korean law search MCP plugin - Search Korean laws, court cases, legal terms via 법령정보센터 API",
+      "version": "1.0.0",
+      "category": "legal",
+      "tags": ["korean-law", "legal", "law-search", "mcp"],
+      "author": {
+        "name": "hoshin"
+      },
+      "homepage": "https://github.com/hoshin/lyn-lawfirm"
+    }
+  ]
+}
