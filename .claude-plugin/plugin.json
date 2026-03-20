@@ -1,7 +1,7 @@
 {
   "name": "lyn-lawfirm",
   "version": "1.0.0",
-  "description": "Korean law search MCP plugin - Search Korean laws, court cases, legal terms, and more via the Korean Law Information Center (법령정보센터) API",
+  "description": "한국 법률 검색 MCP 플러그인 - 법령, 판례, 법률용어, 헌법재판, 행정심판 등 검색 | Korean law search MCP plugin - Search laws, court cases, legal terms via 국가법령정보센터 API",
   "author": {
     "name": "hoshin",
     "url": "https://github.com/hjsh200219"
