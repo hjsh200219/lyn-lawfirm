@@ -22,7 +22,7 @@ Korean law search plugin for Claude Code. Connects to the Korean Law Information
 Add the marketplace and install:
 
 ```shell
-/plugin marketplace add hoshin/lyn-lawfirm
+/plugin marketplace add hjsh200219/lyn-lawfirm
 /plugin install lyn-lawfirm@lyn-lawfirm
 ```
 

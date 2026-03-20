@@ -4,10 +4,10 @@
   "description": "Korean law search MCP plugin - Search Korean laws, court cases, legal terms, and more via the Korean Law Information Center (법령정보센터) API",
   "author": {
     "name": "hoshin",
-    "url": "https://github.com/hoshin"
+    "url": "https://github.com/hjsh200219"
   },
-  "homepage": "https://github.com/hoshin/lyn-lawfirm",
-  "repository": "https://github.com/hoshin/lyn-lawfirm",
+  "homepage": "https://github.com/hjsh200219/lyn-lawfirm",
+  "repository": "https://github.com/hjsh200219/lyn-lawfirm",
   "license": "MIT",
   "keywords": [
     "korean-law",
