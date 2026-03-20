@@ -1,8 +1,8 @@
 # lyn-lawfirm
 
-한국 법률 검색 Claude Code 플러그인 - 국가법령정보센터 API를 통해 법령, 판례, 법률용어 등을 검색합니다.
+한국 법률 검색 및 법률 문서 작성 Claude Code 플러그인 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 형사합의서, 사실확인서 초안 작성
 
-Korean law search plugin for Claude Code. Connects to the Korean Law Information Center (국가법령정보센터) API via MCP.
+Korean law search & legal document drafting plugin for Claude Code. Search laws, cases, legal terms via MCP + draft complaints, certified letters, settlement agreements, and fact confirmations.
 
 ## 주요 기능 | Features
 
@@ -16,6 +16,13 @@ Korean law search plugin for Claude Code. Connects to the Korean Law Information
 - **판례 상세 | Case Detail**: 판결문 전문 조회 / Get full court decision text
 - **조약 검색 | Treaty Search**: 국제 조약 검색 / Search international treaties
 - **자치법규 검색 | Ordinance Search**: 지방자치단체 조례/규칙 검색 / Search local government ordinances
+
+### 법률 문서 작성 스킬 | Legal Document Drafting Skills
+
+- **고소장 작성 | Complaint Drafter**: 상담녹취록/증거자료를 분석하여 형사 고소장 초안을 .docx로 작성 / Draft criminal complaints from consultation transcripts and evidence
+- **내용증명 작성 | Certified Letter**: 법률 분쟁 상황에 맞는 내용증명 초안을 .docx로 작성 / Draft certified letters for legal disputes
+- **형사 합의서 작성 | Criminal Settlement**: 형사 사건 합의서 초안을 .docx로 작성 / Draft criminal case settlement agreements
+- **사실확인서 작성 | Fact Confirmation**: 법원 제출용 사실확인서 초안을 .docx로 작성 / Draft fact confirmation documents for court submission
 
 ## 설치 방법 | Installation
 
@@ -46,6 +53,10 @@ claude mcp add korean-law --transport http https://korean-law.up.railway.app/mcp
 - "선의취득의 법률용어 정의를 알려줘" (Define the legal term 'bona fide acquisition')
 - "Search for laws related to intellectual property"
 - "Find constitutional court decisions about freedom of expression"
+- "이 녹취록을 바탕으로 고소장을 작성해줘" (Draft a criminal complaint from this transcript)
+- "임대차 분쟁 내용증명을 작성해줘" (Draft a certified letter for a lease dispute)
+- "형사 합의서를 작성해줘" (Draft a criminal settlement agreement)
+- "사실확인서를 작성해줘" (Draft a fact confirmation document)
 
 ## MCP 서버 | MCP Server
 

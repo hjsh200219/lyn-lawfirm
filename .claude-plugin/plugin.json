@@ -1,7 +1,7 @@
 {
   "name": "lyn-lawfirm",
   "version": "1.0.0",
-  "description": "한국 법률 검색 MCP 플러그인 - 법령, 판례, 법률용어, 헌법재판, 행정심판 등 검색 | Korean law search MCP plugin - Search laws, court cases, legal terms via 국가법령정보센터 API",
+  "description": "한국 법률 검색 및 법률 문서 작성 플러그인 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 형사합의서, 사실확인서 초안 작성 | Korean law search & legal document drafting plugin - Search laws, cases, legal terms + draft complaints, certified letters, settlement agreements, fact confirmations",
   "author": {
     "name": "hoshin",
     "url": "https://github.com/hjsh200219"
@@ -17,6 +17,11 @@
     "법률",
     "법령",
     "판례",
-    "법률검색"
+    "법률검색",
+    "고소장",
+    "내용증명",
+    "합의서",
+    "사실확인서",
+    "legal-document"
   ]
 }
