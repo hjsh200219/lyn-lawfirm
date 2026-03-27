@@ -1,8 +1,8 @@
 # lyn-lawfirm
 
-한국 법률 검색 및 법률 문서 작성 Claude Code 플러그인 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 형사합의서, 사실확인서 초안 작성
+한국 법률 검색, 법률 문서 작성 및 형사 분석 Claude Code 플러그인 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 형사합의서, 사실확인서 초안 작성 + 형사절차 시뮬레이션, 양형 예측
 
-Korean law search & legal document drafting plugin for Claude Code. Search laws, cases, legal terms via MCP + draft complaints, certified letters, settlement agreements, and fact confirmations.
+Korean law search, legal document drafting & criminal analysis plugin for Claude Code. Search laws, cases, legal terms via MCP + draft complaints, certified letters, settlement agreements, fact confirmations + criminal procedure simulation, sentencing prediction.
 
 ## 주요 기능 | Features
 
@@ -17,12 +17,19 @@ Korean law search & legal document drafting plugin for Claude Code. Search laws,
 - **조약 검색 | Treaty Search**: 국제 조약 검색 / Search international treaties
 - **자치법규 검색 | Ordinance Search**: 지방자치단체 조례/규칙 검색 / Search local government ordinances
 
-### 법률 문서 작성 스킬 | Legal Document Drafting Skills
+### 법률 스킬 | Legal Skills
+
+#### 문서 작성 | Document Drafting
 
 - **고소장 작성 | Complaint Drafter**: 상담녹취록/증거자료를 분석하여 형사 고소장 초안을 .docx로 작성 / Draft criminal complaints from consultation transcripts and evidence
 - **내용증명 작성 | Certified Letter**: 법률 분쟁 상황에 맞는 내용증명 초안을 .docx로 작성 / Draft certified letters for legal disputes
 - **형사 합의서 작성 | Criminal Settlement**: 형사 사건 합의서 초안을 .docx로 작성 / Draft criminal case settlement agreements
 - **사실확인서 작성 | Fact Confirmation**: 법원 제출용 사실확인서 초안을 .docx로 작성 / Draft fact confirmation documents for court submission
+
+#### 형사 분석 | Criminal Analysis
+
+- **형사절차 시뮬레이터 | Criminal Procedure Simulator**: 사용자의 상황(피의자/피고인/피해자/참고인)을 파악하여 수사→기소→재판→판결→집행의 전 과정을 안내하고, 인터랙티브 React 위젯으로 시각화 / Simulate the entire criminal procedure flow based on user's situation and visualize it with an interactive React widget
+- **양형 예측 | Sentencing Predictor**: 대법원 양형위원회 양형기준표와 실제 판례를 조합하여 예상 선고형과 집행유예 가능성을 IRAC 분석으로 제공 / Predict sentencing outcomes using Supreme Court sentencing guidelines and case law with IRAC analysis
 
 ## 설치 방법 | Installation
 
@@ -57,6 +64,10 @@ claude mcp add korean-law --transport http https://korean-law.up.railway.app/mcp
 - "임대차 분쟁 내용증명을 작성해줘" (Draft a certified letter for a lease dispute)
 - "형사 합의서를 작성해줘" (Draft a criminal settlement agreement)
 - "사실확인서를 작성해줘" (Draft a fact confirmation document)
+- "경찰 조사를 받았는데 앞으로 어떻게 되나요?" (I was questioned by police, what happens next?)
+- "사기죄로 기소됐는데 형사절차를 알려줘" (Show me the criminal procedure for a fraud charge)
+- "사기 피해액 1억, 초범인데 양형이 어떻게 될까요?" (Predict sentencing for fraud with 100M KRW damage, first offense)
+- "집행유예 가능성이 있나요?" (Is a suspended sentence possible?)
 
 ## MCP 서버 | MCP Server
 
