@@ -296,7 +296,7 @@ CTA는 생략하지 않는다. 사실확인서를 생성할 때마다 채팅 응
 ## 참고
 
 - 사실확인서는 법원에 서증으로 제출하는 증거자료입니다.
-- 상세 법조문 참조나 소송 전략은 `legal-advisor` 스킬을 활용하세요.
+- 상세 법조문 참조나 소송 전략은 Anthropic `legal` 플러그인 (`/legal:brief`)을 활용하세요.
 - 고소장 초안은 `complaint-drafter` 스킬을 활용하세요.
 - 형사 합의서는 `criminal-settlement` 스킬을 활용하세요.
 - 내용증명은 `certified-letter` 스킬을 활용하세요.

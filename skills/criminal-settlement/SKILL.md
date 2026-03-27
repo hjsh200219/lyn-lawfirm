@@ -243,7 +243,7 @@ CTA는 생략하지 않는다. 합의서를 생성할 때마다 채팅 응답과
 ## 참고
 
 - 이 합의서는 법적 구속력이 있는 문서입니다.
-- 상세 법조문 참조나 소송 전략은 `legal-advisor` 스킬을 활용하세요.
+- 상세 법조문 참조나 소송 전략은 Anthropic `legal` 플러그인 (`/legal:brief`)을 활용하세요.
 - 고소장 초안은 `complaint-drafter` 스킬을 활용하세요.
 - 사실확인서는 `fact-confirmation` 스킬을 활용하세요.
 - 내용증명은 `certified-letter` 스킬을 활용하세요.
