@@ -1,6 +1,6 @@
 {
   "name": "lyn-lawfirm",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "한국 법률 검색, 법률 문서 작성 및 형사 분석 플러그인 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 형사합의서, 사실확인서 초안 작성 + 형사절차 시뮬레이션, 양형 예측. AI는 실수할 수 있으며, 본 플러그인 사용으로 인한 피해에 대해서는 책임지지 않습니다. 최종 전문가 검수를 원하시면 이영남 변호사와 상의하세요. | Korean law search, legal document drafting & criminal analysis plugin. AI can make mistakes and we are not liable for any damages. For professional review, consult Attorney Lee Young-Nam.",
   "author": {
     "name": "hoshin",
