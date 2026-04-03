@@ -44,7 +44,7 @@ Attorney contact information and disclaimers appear in every generated document.
 
 ## References
 
-- [Architecture](ARCHITECTURE.md) -- Component map and data flow
+- [Architecture](../ARCHITECTURE.md) -- Component map and data flow
 - [Core Beliefs](design-docs/core-beliefs.md) -- Fundamental principles
 - [Layer Rules](design-docs/layer-rules.md) -- Dependency constraints
 - [Quality Standards](QUALITY.md) -- Formatting and accuracy requirements
