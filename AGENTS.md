@@ -1,99 +1,18 @@
-# CLAUDE.md -- lyn-lawfirm
+# AGENTS.md -- lyn-lawfirm
 
 Korean law search & legal document drafting plugin for Claude Code.
 
 ## Quick Start
 
 ```bash
-# Install as Claude Code plugin
 /plugin marketplace add hjsh200219/lyn-lawfirm
 /plugin install lyn-lawfirm@lyn-lawfirm
 ```
 
-## Project Structure
-
-```
-.claude-plugin/        Plugin manifest & marketplace config
-.mcp.json              MCP server connection (korean-law @ Railway)
-skills/                Legal document drafting & analysis skills (6 skills)
-references/            Shared resources (CTA config)
-docs/                  Knowledge base
-```
-
-## Skills (L2)
-
-| Skill | Triggers | Output |
-|-------|----------|--------|
-| `complaint-drafter` | 고소장, 형사고소 | .docx criminal complaint |
-| `certified-letter` | 내용증명, 통지서, 최고서 | .docx certified letter |
-| `criminal-settlement` | 합의서, 형사합의 | .docx settlement (has generate.js) |
-| `fact-confirmation` | 사실확인서, 진술서 | .docx fact confirmation |
-| `sentencing-predictor` | 양형, 양형예측, 형량 | sentencing prediction with IRAC analysis |
-| `criminal-procedure-simulator` | 형사절차, 수사절차 | interactive procedure simulation |
-
-## Key References
-
-- **Agent map**: [AGENTS.md](AGENTS.md) -- full navigation index for agents
-- **Architecture**: [ARCHITECTURE.md](ARCHITECTURE.md) -- system overview, component map, data flow
-- **Design**: [docs/DESIGN.md](docs/DESIGN.md) -- philosophy and key decisions
-- **Quality standards**: [docs/QUALITY.md](docs/QUALITY.md)
-- **Quality scoring**: [docs/QUALITY_SCORE.md](docs/QUALITY_SCORE.md)
-- **Reliability**: [docs/RELIABILITY.md](docs/RELIABILITY.md)
-- **Security**: [docs/SECURITY.md](docs/SECURITY.md)
-- **Layer rules**: [docs/design-docs/layer-rules.md](docs/design-docs/layer-rules.md)
-- **Core beliefs**: [docs/design-docs/core-beliefs.md](docs/design-docs/core-beliefs.md)
-- **Product sense**: [docs/PRODUCT_SENSE.md](docs/PRODUCT_SENSE.md)
-- **Product specs**: [docs/product-specs/index.md](docs/product-specs/index.md)
-- **Plans**: [docs/PLANS.md](docs/PLANS.md)
-- **Tech debt**: [docs/exec-plans/tech-debt-tracker.md](docs/exec-plans/tech-debt-tracker.md)
-- **Data schema**: [docs/generated/db-schema.md](docs/generated/db-schema.md)
-- **CTA config**: [references/cta-config.md](references/cta-config.md)
-
-## MCP Server
-
-- URL: `https://korean-law.up.railway.app/mcp`
-- Source: 국가법령정보센터 Open API
-- Key tools: `search_laws`, `search_cases`, `get_law_detail`, `get_case_detail`, `search_interpretations`
-
-## Conventions
-
-- Font: Batang 12pt, A4, margins 25/20/25/25mm
-- Dates: `0000. 00. 00.` (Korean legal standard)
-- Evidence: `증 제N호증` numbering system
-- Unknown info: `[확인 필요]` -- never fabricate
-- CTA: mandatory on every document (chat + .docx last page)
-- Source of truth for attorney info: `references/cta-config.md`
-
-## Build & Deploy
-
-- No build step (plugin is prompt-based SKILL.md files + 1 Node.js script)
-- `criminal-settlement/scripts/generate.js` requires `npm install -g docx`
-- Push to `main` updates the marketplace listing
-- Plugin version: `.claude-plugin/plugin.json` (currently 1.1.0)
-
-## Layer Rules (Summary)
-
-```
-L0 Manifest (.claude-plugin/, .mcp.json) -> nothing
-L1 References (references/)              -> nothing
-L2 Skills (skills/*/SKILL.md)            -> L1, L0(MCP)
-L3 Scripts (skills/*/scripts/)           -> L1, npm:docx
-L4 Docs (docs/, README.md)              -> any
-```
-
-See [docs/design-docs/layer-rules.md](docs/design-docs/layer-rules.md) for full rules.
-
-
----
-
-# AGENTS.md -- lyn-lawfirm
-
-Navigation map for AI agents working on this repository.
-
 ## Quick Orientation
 
-This is a **Claude Code plugin** for Korean law search and legal document drafting.
-It is NOT a traditional application -- no servers, no databases, no frontend.
+This is a **Claude Code plugin** -- NOT a traditional application.
+No servers, no databases, no frontend.
 Skills are prompt-based (SKILL.md files) with one Node.js script for .docx generation.
 
 ## Repository Map
@@ -112,6 +31,17 @@ references/               Shared resources
   cta-config.md           Attorney CTA info (single source of truth)
 docs/                     Knowledge base and documentation
 ```
+
+## Skills (L2)
+
+| Skill | Triggers | Output |
+|-------|----------|--------|
+| `complaint-drafter` | 고소장, 형사고소 | .docx criminal complaint |
+| `certified-letter` | 내용증명, 통지서, 최고서 | .docx certified letter |
+| `criminal-settlement` | 합의서, 형사합의 | .docx settlement (has generate.js) |
+| `fact-confirmation` | 사실확인서, 진술서 | .docx fact confirmation |
+| `sentencing-predictor` | 양형, 양형예측, 형량 | sentencing prediction with IRAC analysis |
+| `criminal-procedure-simulator` | 형사절차, 수사절차 | interactive procedure simulation |
 
 ## Documentation Index
 
@@ -142,6 +72,19 @@ docs/                     Knowledge base and documentation
 - [references/cta-config.md](references/cta-config.md) -- Attorney info and CTA templates
 - [skills/criminal-settlement/references/legal-notes.md](skills/criminal-settlement/references/legal-notes.md) -- Case-type legal notes
 
+## MCP Server
+
+- URL: `https://korean-law.up.railway.app/mcp`
+- Source: 국가법령정보센터 Open API
+
+| Tool | Purpose |
+|------|---------|
+| `search_laws` | Search Korean statutes by name or text |
+| `search_cases` | Search court decisions |
+| `get_law_detail` | Get full text of a specific law |
+| `get_case_detail` | Get full court decision text |
+| `search_interpretations` | Search legal interpretations |
+
 ## Key Rules for Agents
 
 1. **Never fabricate** -- use `[확인 필요]` for unknown information
@@ -152,7 +95,16 @@ docs/                     Knowledge base and documentation
 6. **Korean legal formatting** -- Batang 12pt, A4, `0000. 00. 00.` dates, `증 제N호증`
 7. **Escalate edge cases** -- SOL < 3 months, amount > 5 billion KRW, public officials
 
-## Layer Summary
+## Conventions
+
+- Font: Batang 12pt, A4, margins 25/20/25/25mm
+- Dates: `0000. 00. 00.` (Korean legal standard)
+- Evidence: `증 제N호증` numbering system
+- Unknown info: `[확인 필요]` -- never fabricate
+- CTA: mandatory on every document (chat + .docx last page)
+- Source of truth for attorney info: `references/cta-config.md`
+
+## Layer Rules
 
 ```
 L0 Manifest    (.claude-plugin/, .mcp.json)    -> nothing
@@ -162,21 +114,11 @@ L3 Scripts     (skills/*/scripts/)              -> L1, npm:docx
 L4 Docs        (docs/, README.md, AGENTS.md)    -> any
 ```
 
-## MCP Tools Available
-
-Server: `https://korean-law.up.railway.app/mcp`
-
-| Tool | Purpose |
-|------|---------|
-| `search_laws` | Search Korean statutes by name or text |
-| `search_cases` | Search court decisions |
-| `get_law_detail` | Get full text of a specific law |
-| `get_case_detail` | Get full court decision text |
-| `search_interpretations` | Search legal interpretations |
+See [docs/design-docs/layer-rules.md](docs/design-docs/layer-rules.md) for full rules.
 
 ## Build & Deploy
 
-- No build step (prompt-based plugin)
+- No build step (plugin is prompt-based SKILL.md files + 1 Node.js script)
 - `criminal-settlement/scripts/generate.js` requires `npm install -g docx`
-- Push to `main` updates marketplace listing
-- Version tracked in `.claude-plugin/plugin.json` (currently 1.1.0)
+- Push to `main` updates the marketplace listing
+- Plugin version: `.claude-plugin/plugin.json` (currently 1.1.0)
