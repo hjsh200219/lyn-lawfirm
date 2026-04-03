@@ -15,7 +15,7 @@ Korean law search & legal document drafting plugin for Claude Code.
 ```
 .claude-plugin/        Plugin manifest & marketplace config
 .mcp.json              MCP server connection (korean-law @ Railway)
-skills/                Legal document drafting skills (4 skills)
+skills/                Legal document drafting & analysis skills (6 skills)
 references/            Shared resources (CTA config)
 docs/                  Knowledge base
 ```
@@ -28,6 +28,8 @@ docs/                  Knowledge base
 | `certified-letter` | 내용증명, 통지서, 최고서 | .docx certified letter |
 | `criminal-settlement` | 합의서, 형사합의 | .docx settlement (has generate.js) |
 | `fact-confirmation` | 사실확인서, 진술서 | .docx fact confirmation |
+| `sentencing-predictor` | 양형, 양형예측, 형량 | sentencing prediction with IRAC analysis |
+| `criminal-procedure-simulator` | 형사절차, 수사절차 | interactive procedure simulation |
 
 ## Key References
 
@@ -99,11 +101,13 @@ Skills are prompt-based (SKILL.md files) with one Node.js script for .docx gener
 ```
 .claude-plugin/           Plugin manifest & marketplace config
 .mcp.json                 MCP server connection (korean-law @ Railway)
-skills/                   Legal document drafting skills (4 skills)
+skills/                   Legal document drafting & analysis skills (6 skills)
   complaint-drafter/      Criminal complaint (고소장) -- SKILL.md only
   certified-letter/       Certified letter (내용증명) -- SKILL.md only
   criminal-settlement/    Settlement agreement (형사합의서) -- SKILL.md + generate.js
   fact-confirmation/      Fact confirmation (사실확인서) -- SKILL.md only
+  sentencing-predictor/   Sentencing prediction (양형 예측) -- SKILL.md only
+  criminal-procedure-simulator/ Criminal procedure simulation (형사절차 시뮬레이션) -- SKILL.md only
 references/               Shared resources
   cta-config.md           Attorney CTA info (single source of truth)
 docs/                     Knowledge base and documentation

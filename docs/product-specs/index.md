@@ -8,6 +8,8 @@
 | certified-letter | `skills/certified-letter/SKILL.md` | Certified letter drafting (내용증명) |
 | criminal-settlement | `skills/criminal-settlement/SKILL.md` | Criminal settlement agreement (형사합의서) |
 | fact-confirmation | `skills/fact-confirmation/SKILL.md` | Fact confirmation document (사실확인서) |
+| sentencing-predictor | `skills/sentencing-predictor/SKILL.md` | Sentencing prediction with IRAC analysis (양형 예측) |
+| criminal-procedure-simulator | `skills/criminal-procedure-simulator/SKILL.md` | Criminal procedure simulation (형사절차 시뮬레이션) |
 
 ## Shared Resources
 

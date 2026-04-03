@@ -8,5 +8,5 @@
 
 ## Planned
 
-- Skill template standardization (unify SKILL.md structure across all 4 skills)
+- Skill template standardization (unify SKILL.md structure across all 6 skills)
 - MCP tool usage patterns (common search strategies for law/case lookup)

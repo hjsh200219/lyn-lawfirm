@@ -2,13 +2,13 @@
 
 ## Current State (v1.0.0)
 
-The plugin ships with 4 legal document drafting skills and a remote MCP server for Korean law search. All skills are production-ready and available via the Claude Code marketplace.
+The plugin ships with 6 skills (4 document drafting + 2 criminal analysis) and a remote MCP server for Korean law search. All skills are production-ready and available via the Claude Code marketplace.
 
 ## Planned Improvements
 
 ### Short-Term
 
-- **Skill template standardization**: Unify SKILL.md frontmatter format and section structure across all 4 skills (noted in design-docs/index.md)
+- **Skill template standardization**: Unify SKILL.md frontmatter format and section structure across all 6 skills (noted in design-docs/index.md)
 - **MCP tool usage patterns**: Document common search strategies for law/case lookup
 - **Fix TD-001**: Read CTA info from `references/cta-config.md` in `generate.js` instead of hardcoding
 - **Fix TD-002**: Align `generate.js` font to Batang per quality standards

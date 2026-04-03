@@ -12,11 +12,13 @@ lyn-lawfirm/
 │   ├── plugin.json          # Plugin manifest (name, version, keywords)
 │   └── marketplace.json     # Marketplace listing config
 ├── .mcp.json                # MCP server connection (korean-law @ Railway)
-├── skills/                  # Legal document drafting skills
+├── skills/                  # Legal document drafting & analysis skills
 │   ├── certified-letter/    # SKILL.md -- certified letter (내용증명)
 │   ├── complaint-drafter/   # SKILL.md -- criminal complaint (고소장)
 │   ├── criminal-settlement/ # SKILL.md + scripts/generate.js + references/
-│   └── fact-confirmation/   # SKILL.md -- fact confirmation (사실확인서)
+│   ├── fact-confirmation/   # SKILL.md -- fact confirmation (사실확인서)
+│   ├── sentencing-predictor/ # SKILL.md -- sentencing prediction (양형 예측)
+│   └── criminal-procedure-simulator/ # SKILL.md -- procedure simulation (형사절차 시뮬레이션)
 ├── references/              # Shared references for all skills
 │   └── cta-config.md        # Attorney CTA info (이영남 변호사)
 ├── docs/                    # Knowledge base (this directory)

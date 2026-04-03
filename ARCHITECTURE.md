@@ -12,20 +12,21 @@ lyn-lawfirm/
 │   ├── plugin.json            #   Plugin manifest (name, version, keywords)
 │   └── marketplace.json       #   Marketplace listing config
 ├── .mcp.json                  # L0: MCP server connection (korean-law @ Railway)
-├── skills/                    # L2/L3: Legal document drafting skills
+├── skills/                    # L2/L3: Legal document drafting & analysis skills
 │   ├── complaint-drafter/     #   L2: SKILL.md -- criminal complaint (고소장)
 │   ├── certified-letter/      #   L2: SKILL.md -- certified letter (내용증명)
 │   ├── criminal-settlement/   #   L2: SKILL.md + L3: scripts/generate.js
 │   │   ├── SKILL.md
 │   │   ├── scripts/generate.js
 │   │   └── references/legal-notes.md
-│   └── fact-confirmation/     #   L2: SKILL.md -- fact confirmation (사실확인서)
+│   ├── fact-confirmation/     #   L2: SKILL.md -- fact confirmation (사실확인서)
+│   ├── sentencing-predictor/  #   L2: SKILL.md -- sentencing prediction (양형 예측)
+│   └── criminal-procedure-simulator/ # L2: SKILL.md -- procedure simulation (형사절차 시뮬레이션)
 ├── references/                # L1: Shared references for all skills
 │   └── cta-config.md          #   Attorney CTA info (이영남 변호사)
 ├── docs/                      # L4: Knowledge base
-├── AGENTS.md                  # L4: Agent navigation map
-├── CLAUDE.md -> agent.md      # L4: Agent instructions (symlink)
-├── agent.md                   # L4: Agent instructions (source)
+├── AGENTS.md                  # L4: Agent navigation map (source)
+├── CLAUDE.md -> AGENTS.md     # L4: Symlink to AGENTS.md
 ├── README.md                  # L4: Public-facing documentation
 └── LICENSE                    # MIT + legal disclaimer
 ```
@@ -53,7 +54,7 @@ User request (e.g. "고소장 써줘")
 | Boundary | Owner | Technology | Note |
 |----------|-------|------------|------|
 | MCP Server | External (Railway) | Node.js HTTP | `https://korean-law.up.railway.app/mcp` |
-| Skills | This repo | Prompt (SKILL.md) | 4 skills, keyword-triggered |
+| Skills | This repo | Prompt (SKILL.md) | 6 skills, keyword-triggered |
 | Script | This repo | Node.js | Only `criminal-settlement/scripts/generate.js` |
 | CTA Config | This repo | Markdown | `references/cta-config.md` -- single source of truth |
 | Plugin Manifest | This repo | JSON | `.claude-plugin/` -- marketplace listing |
