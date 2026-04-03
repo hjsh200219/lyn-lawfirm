@@ -53,7 +53,7 @@ docs/                  Knowledge base
 
 - URL: `https://korean-law.up.railway.app/mcp`
 - Source: 국가법령정보센터 Open API
-- Key tools: `search_laws`, `search_cases`, `get_law_detail`, `get_case_detail`
+- Key tools: `search_laws`, `search_cases`, `get_law_detail`, `get_case_detail`, `search_interpretations`
 
 ## Conventions
 
@@ -69,7 +69,7 @@ docs/                  Knowledge base
 - No build step (plugin is prompt-based SKILL.md files + 1 Node.js script)
 - `criminal-settlement/scripts/generate.js` requires `npm install -g docx`
 - Push to `main` updates the marketplace listing
-- Plugin version: `.claude-plugin/plugin.json` (currently 1.0.0)
+- Plugin version: `.claude-plugin/plugin.json` (currently 1.1.0)
 
 ## Layer Rules (Summary)
 
@@ -179,4 +179,4 @@ Server: `https://korean-law.up.railway.app/mcp`
 - No build step (prompt-based plugin)
 - `criminal-settlement/scripts/generate.js` requires `npm install -g docx`
 - Push to `main` updates marketplace listing
-- Version tracked in `.claude-plugin/plugin.json` (currently 1.0.0)
+- Version tracked in `.claude-plugin/plugin.json` (currently 1.1.0)

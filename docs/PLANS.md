@@ -1,6 +1,6 @@
 # Plans
 
-## Current State (v1.0.0)
+## Current State (v1.1.0)
 
 The plugin ships with 6 skills (4 document drafting + 2 criminal analysis) and a remote MCP server for Korean law search. All skills are production-ready and available via the Claude Code marketplace.
 

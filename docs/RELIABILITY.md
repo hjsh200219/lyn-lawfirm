@@ -37,7 +37,7 @@
 - Plugin distributed via Claude Code marketplace (`/plugin marketplace add hjsh200219/lyn-lawfirm`)
 - MCP server independently hosted on Railway
 - No CI/CD pipeline in this repo -- changes are pushed directly to `main`
-- Plugin version tracked in `.claude-plugin/plugin.json` (currently 1.0.0)
+- Plugin version tracked in `.claude-plugin/plugin.json` (currently 1.1.0)
 
 ## Monitoring
 

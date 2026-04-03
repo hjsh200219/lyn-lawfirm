@@ -4,6 +4,7 @@
 
 | Doc | Status | Description |
 |-----|--------|-------------|
+| [core-beliefs.md](core-beliefs.md) | Active | Fundamental principles and core beliefs |
 | [layer-rules.md](layer-rules.md) | Active | Layer dependency rules for the plugin |
 
 ## Planned
