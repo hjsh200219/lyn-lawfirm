@@ -122,3 +122,5 @@ See [docs/design-docs/layer-rules.md](docs/design-docs/layer-rules.md) for full 
 - `criminal-settlement/scripts/generate.js` requires `npm install -g docx`
 - Push to `main` updates the marketplace listing
 - Plugin version: `.claude-plugin/plugin.json` (currently 1.1.0)
+
+> Be concise. No filler. Straight to the point. Use fewer words.
