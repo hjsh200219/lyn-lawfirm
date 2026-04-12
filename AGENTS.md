@@ -124,3 +124,12 @@ See [docs/design-docs/layer-rules.md](docs/design-docs/layer-rules.md) for full 
 - Plugin version: `.claude-plugin/plugin.json` (currently 1.1.0)
 
 > Be concise. No filler. Straight to the point. Use fewer words.
+
+
+## TDD 필수
+
+모든 새 기능/로직 변경은 반드시 TDD로 개발한다.
+1. Red: 실패하는 테스트 먼저 작성
+2. Green: 테스트를 통과하는 최소 코드 작성
+3. Refactor: 코드 정리
+테스트 없는 코드 변경은 허용하지 않는다.
