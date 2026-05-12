@@ -62,6 +62,8 @@ docs/                     Knowledge base and documentation
 - [docs/PRODUCT_SENSE.md](docs/PRODUCT_SENSE.md) -- Users, problems, constraints
 - [docs/product-specs/index.md](docs/product-specs/index.md) -- Skills and resources overview
 - [docs/PLANS.md](docs/PLANS.md) -- Roadmap and improvement plans
+- [docs/plans/ai-law-firm.md](docs/plans/ai-law-firm.md) -- AI 법무법인 multi-agent architecture (RALPLAN consensus)
+- [docs/plans/ai-law-firm-open-questions.md](docs/plans/ai-law-firm-open-questions.md) -- AI 법무법인 open decision points
 - [docs/FRONTEND.md](docs/FRONTEND.md) -- No frontend; .docx output formatting
 
 ### Data & Tech Debt
