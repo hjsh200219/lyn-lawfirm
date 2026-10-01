@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "korean-law": {
+    "k-data": {
       "type": "url",
-      "url": "https://korean-law.up.railway.app/mcp"
+      "url": "https://public-data.up.railway.app/mcp"
     }
   }
 }

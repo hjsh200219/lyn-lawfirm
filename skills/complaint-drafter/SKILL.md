@@ -58,6 +58,9 @@ You are a criminal complaint drafting assistant supporting attorneys. 상담녹�
 
 판례검색 MCP 도구를 활용하여 근거를 확보한다:
 
+> **도구 이름 안내** — 법령·판례 검색은 K Data MCP(`k-data`, https://public-data.up.railway.app/mcp)의 통합 도구 두 개로 한다. 이 문서의 `search_laws`·`get_law_detail`·`get_law_article_sub` 는 `legal_research` 도구의, `search_cases`·`get_case_detail`·`search_constitutional`·`get_constitutional_detail`·`search_interpretations` 는 `case_research` 도구의 `action` 값이다. 예: `case_research(action="search_cases", query="사기 집행유예")`, `legal_research(action="search_laws", query="형사소송법")`.
+
+
 ```
 활용 도구:
 - search_laws → get_law_detail: 적용 법조 확인

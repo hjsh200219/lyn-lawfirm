@@ -51,4 +51,4 @@ All fields fall back to placeholder values (`○○○`, `○○○○. ○○. 
 
 ## MCP Server Data (External)
 
-The MCP server at `korean-law.up.railway.app` provides law and case data from the Korean National Law Information Center. This repo does not own or manage that data.
+The MCP server at `public-data.up.railway.app` provides law and case data from the Korean National Law Information Center. This repo does not own or manage that data.

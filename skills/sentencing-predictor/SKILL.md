@@ -114,6 +114,8 @@ WebFetch prompt 예시:
 
 ### 3-A. 판례검색 MCP 활용
 
+> **도구 이름 안내** — 법령·판례 검색은 K Data MCP(`k-data`, https://public-data.up.railway.app/mcp)의 통합 도구 두 개로 한다. 이 문서의 `search_laws`·`get_law_detail`·`get_law_article_sub` 는 `legal_research` 도구의, `search_cases`·`get_case_detail`·`search_constitutional`·`get_constitutional_detail`·`search_interpretations` 는 `case_research` 도구의 `action` 값이다. 예: `case_research(action="search_cases", query="사기 집행유예")`, `legal_research(action="search_laws", query="형사소송법")`.
+
 `search_cases` 도구로 유사 사건 판례를 검색한다. 검색어는 핵심 키워드를 2~3개 조합한다.
 
 **검색 전략:**
@@ -123,9 +125,9 @@ WebFetch prompt 예시:
 
 **검색 예시:**
 ```
-search_cases(query="사기 피해액 1억 초범 자백")
-search_cases(query="사기죄 형법 제347조 양형")
-search_cases(query="횡령 집행유예 피해변제")
+case_research(action="search_cases", query="사기 피해액 1억 초범 자백")
+case_research(action="search_cases", query="사기죄 형법 제347조 양형")
+case_research(action="search_cases", query="횡령 집행유예 피해변제")
 ```
 
 ### 3-B. 법령 조문 확인

@@ -6,7 +6,7 @@
 This plugin handles **sensitive legal information**: party names, addresses, dates of birth, case numbers, financial amounts, and descriptions of criminal incidents. All processing occurs within the user's local Claude Code session -- no data is sent to external services except MCP law search queries.
 
 ### MCP Server
-- **Endpoint**: `https://korean-law.up.railway.app/mcp` (HTTPS)
+- **Endpoint**: `https://public-data.up.railway.app/mcp` (HTTPS)
 - **Data sent**: Law search queries (statute names, case numbers, legal terms)
 - **Data NOT sent**: User personal information, party details, document content
 - **Risk**: Low. MCP queries contain only public legal reference lookups, not case-specific sensitive data.

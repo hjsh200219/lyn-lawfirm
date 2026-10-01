@@ -9,7 +9,7 @@
 - Exit codes: 0 on success, 1 on parse failure or generation error
 
 ### MCP Server Dependency
-- Remote server: `https://korean-law.up.railway.app/mcp`
+- Remote server: `https://public-data.up.railway.app/mcp`
 - If MCP is unreachable, skills should note that law/case verification could not be performed
 - Skills should never cite unverified law articles -- mark as `[법령 확인 필요]` if MCP is down
 

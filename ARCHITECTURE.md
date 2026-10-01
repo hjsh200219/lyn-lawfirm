@@ -11,7 +11,7 @@ lyn-lawfirm/
 ├── .claude-plugin/            # L0: Plugin & marketplace metadata
 │   ├── plugin.json            #   Plugin manifest (name, version, keywords)
 │   └── marketplace.json       #   Marketplace listing config
-├── .mcp.json                  # L0: MCP server connection (korean-law @ Railway)
+├── .mcp.json                  # L0: MCP server connection (k-data = K Data MCP @ Railway)
 ├── skills/                    # L2/L3: Legal document drafting & analysis skills
 │   ├── complaint-drafter/     #   L2: SKILL.md -- criminal complaint (고소장)
 │   ├── certified-letter/      #   L2: SKILL.md -- certified letter (내용증명)
@@ -38,7 +38,7 @@ User request (e.g. "고소장 써줘")
   └─> Claude Code matches SKILL.md trigger keywords
         ├─> Skill reads attached files (transcripts, evidence)
         ├─> Skill calls MCP tools (search_laws, search_cases, etc.)
-        │     └─> korean-law MCP server (Railway)
+        │     └─> K Data MCP server (k-data) (Railway)
         │           └─> 국가법령정보센터 Open API
         ├─> Skill drafts document per SKILL.md template
         └─> Skill generates .docx output
@@ -53,7 +53,7 @@ User request (e.g. "고소장 써줘")
 
 | Boundary | Owner | Technology | Note |
 |----------|-------|------------|------|
-| MCP Server | External (Railway) | Node.js HTTP | `https://korean-law.up.railway.app/mcp` |
+| MCP Server | External (Railway) | Node.js HTTP | `https://public-data.up.railway.app/mcp` |
 | Skills | This repo | Prompt (SKILL.md) | 6 skills, keyword-triggered |
 | Script | This repo | Node.js | Only `criminal-settlement/scripts/generate.js` |
 | CTA Config | This repo | Markdown | `references/cta-config.md` -- single source of truth |
@@ -78,7 +78,7 @@ See [docs/design-docs/layer-rules.md](docs/design-docs/layer-rules.md) for full 
 | `docx` (npm) | External | `criminal-settlement/scripts/generate.js` | .docx file generation |
 | Node.js | Runtime | `generate.js` | Script execution |
 | Claude Code | Host | All skills | Plugin host and docx-js provider |
-| korean-law MCP | Remote service | All skills | Law/case data lookup |
+| K Data MCP (k-data) | Remote service | All skills | Law/case data lookup |
 
 ## Conventions
 

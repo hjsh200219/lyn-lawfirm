@@ -20,6 +20,6 @@
 
 ## MCP Integration
 
-- Server: `https://korean-law.up.railway.app/mcp`
+- Server: `https://public-data.up.railway.app/mcp`
 - Source API: 국가법령정보센터 Open API
 - Key tools: `search_laws`, `search_cases`, `get_law_detail`, `get_case_detail`, `search_interpretations`

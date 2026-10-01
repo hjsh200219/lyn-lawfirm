@@ -20,6 +20,8 @@ description: "형사절차 시뮬레이터. 사용자의 상황(피의자/피고
 
 ### MCP 확인 방법
 
+> **도구 이름 안내** — 법령·판례 검색은 K Data MCP(`k-data`, https://public-data.up.railway.app/mcp)의 통합 도구 두 개로 한다. 이 문서의 `search_laws`·`get_law_detail`·`get_law_article_sub` 는 `legal_research` 도구의, `search_cases`·`get_case_detail`·`search_constitutional`·`get_constitutional_detail`·`search_interpretations` 는 `case_research` 도구의 `action` 값이다. 예: `case_research(action="search_cases", query="사기 집행유예")`, `legal_research(action="search_laws", query="형사소송법")`.
+
 사용 가능한 도구 목록에서 아래 도구들이 존재하는지 확인한다:
 
 - `search_cases` — 판례 키워드 검색 (대법원/하급심)
@@ -30,7 +32,7 @@ description: "형사절차 시뮬레이터. 사용자의 상황(피의자/피고
 - `search_constitutional` — 헌법재판소 결정 검색
 - `get_constitutional_detail` — 헌재 결정 상세 조회
 
-이 도구들의 MCP 서버 식별 패턴: 도구 이름에 `search_cases`, `get_case_detail`, `search_laws` 등이 포함된 MCP 도구가 있으면 판례검색 MCP가 연결된 것이다.
+이 도구들의 MCP 서버 식별 패턴: 도구 목록에 `legal_research`·`case_research`(이름 앞에 `k-data` 등 서버 접두사가 붙을 수 있다)가 있으면 판례검색 MCP가 연결된 것이다. 예전 서버(`korean-law`)의 개별 도구 이름(`search_cases` 등)이 보이면 그것도 같은 기능이다.
 
 ### 시나리오 A: MCP가 연결되어 있는 경우 → 적극 활용
 
@@ -88,11 +90,11 @@ MCP 서버는 간헐적으로 불안정할 수 있다. 1회 실패로 즉시 차
 더 정확한 형사절차 안내를 위해 판례검색 MCP를 연결하시면,
 실제 판례와 최신 법령 조문을 실시간으로 검색해서 답변에 반영할 수 있습니다.
 
-MCP 서버 주소: https://korean-law.up.railway.app/mcp
+MCP 서버 주소: https://public-data.up.railway.app/mcp
 
 연결 방법:
 • Claude Desktop → 설정 → MCP 서버 추가 → 위 주소 입력
-• Cowork / Claude Code → MCP 설정에서 위 주소를 SSE 타입으로 추가
+• Cowork / Claude Code → MCP 설정에서 위 주소를 HTTP(streamable) 타입으로 추가 · Claude Code 는 `claude mcp add k-data --transport http https://public-data.up.railway.app/mcp`
 ```
 
 **MCP 미연결 시에는 절차 안내를 진행하지 않는다.** 판례와 법령을 실시간으로 확인하지 못하면 부정확한 정보를 제공할 위험이 있기 때문이다. 연결 안내만 제공하고, 사용자가 MCP를 연결한 뒤 다시 질문해 달라고 요청한다.

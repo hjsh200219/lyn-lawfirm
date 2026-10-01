@@ -47,7 +47,7 @@ Korean law search, legal document drafting & criminal analysis plugin for Claude
 또는 원격 MCP 서버를 직접 추가할 수도 있습니다:
 
 ```shell
-claude mcp add korean-law --transport http https://korean-law.up.railway.app/mcp
+claude mcp add k-data --transport http https://public-data.up.railway.app/mcp
 ```
 
 ## 사용 예시 | Usage Examples
@@ -76,12 +76,14 @@ claude mcp add korean-law --transport http https://korean-law.up.railway.app/mcp
 This plugin connects to a remote MCP server hosted at:
 
 ```
-https://korean-law.up.railway.app/mcp
+https://public-data.up.railway.app/mcp
 ```
 
-국가법령정보센터 Open API를 래핑하여 한국 법률 데이터에 구조화된 접근을 제공합니다.
+이 서버는 [K Data MCP](https://github.com/hjsh200219/korea-public-data-mcp)(대한민국 공공데이터 MCP)입니다. 국가법령정보센터 Open API를 래핑해 법령·판례·헌재결정·법령해석을 제공하며, 플러그인은 그 가운데 `legal_research`(법령)·`case_research`(판례·헌재·해석) 두 도구를 씁니다. 스킬 문서의 `search_laws`·`search_cases` 등은 이 두 도구의 `action` 값입니다.
 
-The server wraps the Korean Law Information Center Open API and provides structured access to Korean legal data.
+This server is [K Data MCP](https://github.com/hjsh200219/korea-public-data-mcp) (Korean public-data MCP). It wraps the Korean Law Information Center Open API; the plugin uses its `legal_research` (statutes) and `case_research` (cases, Constitutional Court, interpretations) tools. Names such as `search_laws` / `search_cases` in the skills are `action` values of those two tools.
+
+> 1.2.0(2026-10-02): 예전 전용 서버 `korean-law.up.railway.app` 가 중단되어 K Data MCP 로 옮겼습니다. / The former dedicated server was retired; moved to K Data MCP.
 
 ## 유의사항 | Disclaimer
 

@@ -19,7 +19,7 @@ Skills are prompt-based (SKILL.md files) with one Node.js script for .docx gener
 
 ```
 .claude-plugin/           Plugin manifest & marketplace config
-.mcp.json                 MCP server connection (korean-law @ Railway)
+.mcp.json                 MCP server connection (k-data = K Data MCP @ Railway)
 skills/                   Legal document drafting & analysis skills (6 skills)
   complaint-drafter/      Criminal complaint (고소장) -- SKILL.md only
   certified-letter/       Certified letter (내용증명) -- SKILL.md only
@@ -76,7 +76,7 @@ docs/                     Knowledge base and documentation
 
 ## MCP Server
 
-- URL: `https://korean-law.up.railway.app/mcp`
+- URL: `https://public-data.up.railway.app/mcp`
 - Source: 국가법령정보센터 Open API
 
 | Tool | Purpose |
