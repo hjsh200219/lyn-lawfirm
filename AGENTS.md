@@ -78,14 +78,12 @@ docs/                     Knowledge base and documentation
 
 - URL: `https://public-data.up.railway.app/mcp`
 - Source: 국가법령정보센터 Open API
+- Config: `.mcp.json` server `k-data`, `"type": "http"` (`"url"` is not a valid type -- the loader silently drops it; `claude plugin validate --strict .` catches it)
 
-| Tool | Purpose |
+| Tool | `action` values used by skills |
 |------|---------|
-| `search_laws` | Search Korean statutes by name or text |
-| `search_cases` | Search court decisions |
-| `get_law_detail` | Get full text of a specific law |
-| `get_case_detail` | Get full court decision text |
-| `search_interpretations` | Search legal interpretations |
+| `legal_research` | `search_laws`, `get_law_detail`, `get_law_article_sub` |
+| `case_research` | `search_cases`, `get_case_detail`, `search_constitutional`, `get_constitutional_detail`, `search_interpretations` |
 
 ## Key Rules for Agents
 
@@ -123,7 +121,7 @@ See [docs/design-docs/layer-rules.md](docs/design-docs/layer-rules.md) for full 
 - No build step (plugin is prompt-based SKILL.md files + 1 Node.js script)
 - `criminal-settlement/scripts/generate.js` requires `npm install -g docx`
 - Push to `main` updates the marketplace listing
-- Plugin version: `.claude-plugin/plugin.json` (currently 1.1.0)
+- Plugin version: `.claude-plugin/plugin.json` (currently 1.2.1)
 
 > Be concise. No filler. Straight to the point. Use fewer words.
 

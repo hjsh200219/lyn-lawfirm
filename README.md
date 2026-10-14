@@ -83,6 +83,8 @@ https://public-data.up.railway.app/mcp
 
 This server is [K Data MCP](https://github.com/hjsh200219/korea-public-data-mcp) (Korean public-data MCP). It wraps the Korean Law Information Center Open API; the plugin uses its `legal_research` (statutes) and `case_research` (cases, Constitutional Court, interpretations) tools. Names such as `search_laws` / `search_cases` in the skills are `action` values of those two tools.
 
+> 1.2.1(2026-10-14): `.mcp.json` 서버 type 을 `"url"` → `"http"` 로 고쳤습니다. 1.2.0 은 설치 시 k-data 서버가 오류 없이 빠졌습니다. / Fixed the MCP server type (`"url"` → `"http"`); in 1.2.0 the k-data server was silently dropped at load.
+>
 > 1.2.0(2026-10-02): 예전 전용 서버 `korean-law.up.railway.app` 가 중단되어 K Data MCP 로 옮겼습니다. / The former dedicated server was retired; moved to K Data MCP.
 
 ## 유의사항 | Disclaimer
