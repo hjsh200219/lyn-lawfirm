@@ -22,4 +22,4 @@
 
 - Server: `https://public-data.up.railway.app/mcp`
 - Source API: 국가법령정보센터 Open API
-- Key tools: `search_laws`, `search_cases`, `get_law_detail`, `get_case_detail`, `search_interpretations`
+- Tools: `legal_research` (actions `search_laws`, `get_law_detail`, `get_law_article_sub`), `case_research` (actions `search_cases`, `get_case_detail`, `search_constitutional`, `get_constitutional_detail`, `search_interpretations`)

@@ -1,0 +1,8 @@
+#!/bin/sh
+# 플러그인 매니페스트 검증 — 1.2.0 의 .mcp.json "type": "url" 처럼 로드 때 조용히 빠지는 결함을 커밋 전에 막는다.
+# 켜기(PC마다 한 번): git config core.hooksPath .githooks
+command -v claude >/dev/null 2>&1 || { echo "pre-commit: claude CLI 없음 — 매니페스트 검증 건너뜀" >&2; exit 0; }
+out=$(claude plugin validate --strict . 2>&1) || { echo "$out" >&2; echo "pre-commit: claude plugin validate --strict 실패" >&2; exit 1; }
+v1=$(sed -n 's/.*"version": *"\([^"]*\)".*/\1/p' .claude-plugin/plugin.json | head -1)
+v2=$(sed -n 's/.*"version": *"\([^"]*\)".*/\1/p' .claude-plugin/marketplace.json | head -1)
+[ "$v1" = "$v2" ] || { echo "pre-commit: 버전 불일치 plugin.json $v1 / marketplace.json $v2" >&2; exit 1; }

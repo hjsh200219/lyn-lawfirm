@@ -66,6 +66,14 @@ description: >
 
 ### 실행 방법
 
+**Claude Code 플러그인**: 스크립트는 이 스킬 폴더의 `scripts/generate.js` 다(스킬을 불러올 때 표시되는 「Base directory for this skill」 경로 아래). `--output` 은 아래 「저장 위치 확인 절차」로 정한 경로를 준다.
+
+```bash
+node "<스킬 폴더>/scripts/generate.js" --data '<JSON 데이터>' --output '<저장 위치>/형사합의서_피해자성명_사건유형.docx'
+```
+
+**claude.ai 샌드박스**(`/mnt/skills` 가 있는 환경):
+
 ```bash
 cd /home/claude
 node /mnt/skills/user/criminal-settlement/scripts/generate.js \

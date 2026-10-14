@@ -14,7 +14,7 @@ Legal document templates are inherently text-heavy with complex conditional logi
 
 ### Why Remote MCP?
 
-Korean law data (statutes, case law, legal terms) is large and frequently updated. Hosting a dedicated MCP server on Railway allows the plugin to access current legal data without bundling it. The MCP server wraps the National Law Information Center (국가법령정보센터) Open API.
+Korean law data (statutes, case law, legal terms) is large and frequently updated. A remote MCP server on Railway (since 1.2.0 the shared K Data MCP `k-data`, replacing the retired dedicated `korean-law` server) allows the plugin to access current legal data without bundling it. The MCP server wraps the National Law Information Center (국가법령정보센터) Open API.
 
 ### Why Centralized CTA?
 

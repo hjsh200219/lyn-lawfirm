@@ -37,7 +37,7 @@ lyn-lawfirm/
 User request (e.g. "고소장 써줘")
   └─> Claude Code matches SKILL.md trigger keywords
         ├─> Skill reads attached files (transcripts, evidence)
-        ├─> Skill calls MCP tools (search_laws, search_cases, etc.)
+        ├─> Skill calls MCP tools (legal_research / case_research, action=search_laws, search_cases, ...)
         │     └─> K Data MCP server (k-data) (Railway)
         │           └─> 국가법령정보센터 Open API
         ├─> Skill drafts document per SKILL.md template
@@ -78,7 +78,7 @@ See [docs/design-docs/layer-rules.md](docs/design-docs/layer-rules.md) for full 
 | `docx` (npm) | External | `criminal-settlement/scripts/generate.js` | .docx file generation |
 | Node.js | Runtime | `generate.js` | Script execution |
 | Claude Code | Host | All skills | Plugin host and docx-js provider |
-| K Data MCP (k-data) | Remote service | All skills | Law/case data lookup |
+| K Data MCP (k-data) | Remote service | complaint-drafter, certified-letter, sentencing-predictor, criminal-procedure-simulator | Law/case data lookup |
 
 ## Conventions
 

@@ -121,6 +121,7 @@ See [docs/design-docs/layer-rules.md](docs/design-docs/layer-rules.md) for full 
 - No build step (plugin is prompt-based SKILL.md files + 1 Node.js script)
 - `criminal-settlement/scripts/generate.js` requires `npm install -g docx`
 - Push to `main` updates the marketplace listing
+- Pre-commit: `.githooks/pre-commit` runs `claude plugin validate --strict .` + version sync check (enable once per PC: `git config core.hooksPath .githooks`)
 - Plugin version: `.claude-plugin/plugin.json` (currently 1.2.1)
 
 > Be concise. No filler. Straight to the point. Use fewer words.
@@ -144,4 +145,4 @@ See [docs/design-docs/layer-rules.md](docs/design-docs/layer-rules.md) for full 
 
 이 규칙은 이전 세션의 미완료 작업·결정 사항·주의사항을 놓치지 않기 위한 강제 사항이다.
 
-**이 프로젝트의 handoff 위치**: 없음 (생성 시 `.claude-project/HANDOFF.md` 권장)
+**이 프로젝트의 handoff 위치**: `.claude-project/HANDOFF.md` (루트 `handoff.md` 대신 이 파일을 읽는다)
