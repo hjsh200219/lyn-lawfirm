@@ -1,22 +1,24 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "lyn-lawfirm",
-  "description": "한국 법률 검색, 법률 문서 작성 및 형사 분석 도구 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 합의서, 사실확인서 작성 + 형사절차 시뮬레이션, 양형 예측. AI는 실수할 수 있으며, 본 플러그인 사용으로 인한 피해에 대해서는 책임지지 않습니다. | Korean law search, legal document drafting & criminal analysis tools. AI can make mistakes and we are not liable for any damages.",
+  "description": "lyn-lawfirm 플러그인은 lawfirm 으로 합쳐졌습니다 — https://github.com/hjsh200219/lawfirm",
   "owner": {
-    "name": "hoshin"
+    "name": "hoshin",
+    "url": "https://github.com/hjsh200219"
+  },
+  "renames": {
+    "lyn-lawfirm": "lawfirm"
   },
   "plugins": [
     {
-      "name": "lyn-lawfirm",
-      "source": "./",
-      "description": "한국 법률 검색, 법률 문서 작성 및 형사 분석 플러그인 - 법령/판례/법률용어 검색 + 고소장, 내용증명, 합의서, 사실확인서 초안 작성 + 형사절차 시뮬레이션, 양형 예측. AI는 실수할 수 있으며, 사용으로 인한 피해에 대해 책임지지 않습니다. | Korean law search, legal document drafting & criminal analysis plugin. AI can make mistakes and we are not liable for any damages.",
-      "version": "1.2.1",
-      "category": "legal",
-      "tags": ["korean-law", "legal", "law-search", "mcp", "legal-document", "고소장", "내용증명", "합의서", "형사절차", "양형예측", "criminal-procedure", "sentencing"],
-      "author": {
-        "name": "hoshin"
+      "name": "lawfirm",
+      "source": {
+        "source": "github",
+        "repo": "hjsh200219/lawfirm"
       },
-      "homepage": "https://github.com/hjsh200219/lyn-lawfirm"
+      "description": "한국 변호사용 법률 업무 플러그인 — 의도 기반 민사 서면·법률 문서 스킬 6종·빅케이스 판례 검색. lyn-lawfirm 에서 이전됨.",
+      "category": "legal",
+      "homepage": "https://github.com/hjsh200219/lawfirm"
     }
   ]
 }
